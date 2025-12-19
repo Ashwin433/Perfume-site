@@ -207,13 +207,11 @@ body {
 }
 
 .product-container {
-    max-width: 1200px;
+    width: 1600px;;
     margin: auto;
     display: flex;
-    gap: 60px;
+    gap: 92px;
 }
-
-
 
 .product-images {
     flex: 1;
@@ -611,16 +609,23 @@ body {
   position: relative;
   padding: 0;
   margin-top: 24px;
+  border: 1.5px solid #1f8f4a;
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
 
 }
 
 /* Header row (same as .subscription-single) */
 .double-header {
   padding: 16px 18px 10px;
-  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
 }
 
 /* Title */
@@ -645,6 +650,7 @@ body {
 }
 
 .double-price .old {
+  font-size: 14px;
   color: #aaa;
   text-decoration: line-through;
 }
@@ -658,13 +664,22 @@ body {
 }
 
 /* FRAGRANCES */
+
+.double-header input[type="radio"] {
+  accent-color: #1f8f4a;
+}
 .double-fragrances {
   padding: 14px 18px 18px;
+  border-radius: 10px;
+  margin-bottom: 16px;
 }
 
 .double-fragrances p {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
   font-weight: 600;
-  margin-bottom: 12px;
+  color: #000;
+  margin-bottom: 12px
 }
 
 .double-fragrance-list {
@@ -677,11 +692,21 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 6px;
+  width: 110px;
+}
+
+.double-fragrance-options span {
   font-size: 14px;
+  display: block;
+  font-weight: 500;
+  color: #000;
+  margin-top: 4px;
 }
 
 .double-fragrance-options img {
   width: 70px;
+  height: auto;
+  margin-top: 6px;
 }
 
 
@@ -696,6 +721,13 @@ body {
 .subscription-card-active.collapsed .included-benefits {
   display: none;
 }
+
+/* COLLAPSE DOUBLE SUBSCRIPTION */
+.subscription-card-double.collapsed .double-fragrances,
+.subscription-card-double.collapsed .double-whats-included {
+  display: none;
+}
+
 
 /* Smooth transition */
 .subscription-card-active {

@@ -1,26 +1,45 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   const singleCard = document.querySelector(".subscription-card-active");
-  const doubleCard = document.querySelector(".subscription-card");
+  const doubleCard = document.querySelector(".subscription-card.subscription-card-double");
 
-  const singleRadio = singleCard.querySelector('input[name="subscription"]');
-  const doubleRadio = doubleCard.querySelector('input[name="subscription"]');
-  
-  // Single selected
-  singleRadio.addEventListener("change", () => {
-    if (singleRadio.checked) {
-      singleCard.classList.remove("collapsed");
-      doubleCard.classList.remove("active");
-    }
+  const radios = document.querySelectorAll('input[name="subscription"]');
+
+  function activateSingle() {
+    singleCard.classList.remove("collapsed");
+    singleCard.classList.add("active");
+
+    doubleCard.classList.add("collapsed");
+    doubleCard.classList.remove("active");
+  }
+
+  function activateDouble() {
+    singleCard.classList.add("collapsed");
+    singleCard.classList.remove("active");
+
+    doubleCard.classList.remove("collapsed");
+    doubleCard.classList.add("active");
+  }
+
+  radios.forEach(radio => {
+    radio.addEventListener("change", () => {
+      if (radio.closest(".subscription-card-double")) {
+        activateDouble();
+      } else {
+        activateSingle();
+      }
+    });
   });
 
-  // Double selected
-  doubleRadio.addEventListener("change", () => {
-    if (doubleRadio.checked) {
-      singleCard.classList.add("collapsed");
-      doubleCard.classList.add("active");
-    }
-  });
+  // INITIAL STATE
+  const checked = document.querySelector('input[name="subscription"]:checked');
+  if (checked && checked.closest(".subscription-card-double")) {
+    activateDouble();
+  } else {
+    activateSingle();
+  }
 });
+
 
 const sliderBtnLeft = document.querySelector('.slider-btn.left');
 const sliderBtnRight = document.querySelector('.slider-btn.right');
@@ -36,6 +55,15 @@ const images = [
 ]
 
 let currentIndex = 0;
+
+ function setImage(index) {
+    currentIndex = index;
+    mainImage.src = images[index];
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+  }
 
 for (let i = 0; i < images.length * 2; i++) {
   const index = i % images.length;
