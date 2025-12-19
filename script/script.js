@@ -1,28 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".subscription-card");
-  const radios = document.querySelectorAll(
-    'input[name="subscription"]'
-  );
+  const singleCard = document.querySelector(".subscription-card-active");
+  const doubleCard = document.querySelector(".subscription-card");
 
-  function updateSelection() {
-    cards.forEach(card => card.classList.remove("active"));
+  const singleRadio = singleCard.querySelector('input[name="subscription"]');
+  const doubleRadio = doubleCard.querySelector('input[name="subscription"]');
 
-    radios.forEach(radio => {
-      if (radio.checked) {
-        radio.closest(".subscription-card").classList.add("active");
-      }
-    });
-  }
-
-  // Click anywhere on card
-  cards.forEach(card => {
-    card.addEventListener("click", () => {
-      const radio = card.querySelector("input[type='radio']");
-      radio.checked = true;
-      updateSelection();
-    });
+  // Single selected
+  singleRadio.addEventListener("change", () => {
+    if (singleRadio.checked) {
+      singleCard.classList.remove("collapsed");
+      doubleCard.classList.remove("active");
+    }
   });
 
-  // Initial state
-  updateSelection();
+  // Double selected
+  doubleRadio.addEventListener("change", () => {
+    if (doubleRadio.checked) {
+      singleCard.classList.add("collapsed");
+      doubleCard.classList.add("active");
+    }
+  });
 });
+
+
+// image slider
+
+const thumbnails = document.querySelectorAll(".image-grid");
+const sliderDots = document.querySelectorAll(".slider-dots");
+const images = document.querySelectorAll(".product-images")
+

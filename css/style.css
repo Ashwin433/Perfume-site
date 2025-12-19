@@ -322,7 +322,6 @@ body {
 
 .product-info{
     width: 610px;
-    height: 1018.83px;
     gap: 31px;
     flex-flow: vertical;
 }
@@ -386,7 +385,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 610px;
-    height: 839.63px;
     gap: 11px;
 }
 
@@ -394,7 +392,6 @@ body {
 .subscription-card-active {
   position: relative;
   width: 610px;
-  height: 772px;
   border: 2px solid #1f8f4a;
   border-radius: 14px;
   padding: 0;
@@ -586,16 +583,22 @@ body {
     
 }
 
-.subscription-card{
-    display: flex;
+.subscription-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border: 1.5px solid #ddd;
+  border-radius: 14px;
+  background: #fff;
+  margin-top: 24px;
 }
+
 
 .subscription-card-notactive{
     display: flex;
     width: 609.97px;
     height: 56.64px;
-    border: 2px solid #1f8f4a;
-    background: #fff;
     border-radius: 14px;
 }
 
@@ -611,6 +614,24 @@ body {
     line-height: 30px;
     letter-spacing: 0.9px;
     vertical-align: middle;
+}
+
+
+
+
+/* ===============================
+   COLLAPSE SINGLE SUBSCRIPTION
+================================ */
+
+.subscription-card-active.collapsed .Fragrances,
+.subscription-card-active.collapsed .whats-included,
+.subscription-card-active.collapsed .included-benefits {
+  display: none;
+}
+
+/* Smooth transition */
+.subscription-card-active {
+  transition: all 0.3s ease;
 }
 
 
