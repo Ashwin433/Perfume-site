@@ -380,42 +380,112 @@ body {
 
 .subscription-options {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    width: 610px;
+    height: 839.63px;
+    gap: 11px;
 }
 
-.subscription-card {
+
+.subscription-card-active {
+  position: relative;
+  width: 610px;
+  height: 772px;
+  border: 2px solid #1f8f4a;
+  border-radius: 14px;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 20px;
+  display: block;
+}
+
+
+.subscription-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+}
+
+
+/* MOST POPULAR BAR */
+.subscription-main {
+  background: linear-gradient(90deg, #19b84a, #0b5f2a);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+}
+
+/* Left: radio + text */
+.subscription-single {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 20px;
-  border: 1.5px solid #ddd;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: 0.3s ease;
+  gap: 10px;
+  padding: 16px 18px;
+  font-weight: 600;
 }
 
-.subscription-card.active {
-  border-color: #1f8f4a;
-  box-shadow: 0 0 0 2px rgba(31, 143, 74, 0.15);
+/* Right: price */
+.subscription-price {
+  position: absolute;
+  right: 18px;
+  top: 64px; /* adjust slightly if needed */
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.subscription-options{
-    width: 610px;
-    height: 772px;
-    flex-direction: column;
+/* Price styling */
+.subscription-price .current {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f8f4a;
 }
 
-.subscription-details {
-    width: 404.7px;
-    height: 180.66px;
-    top: 125px;
-    left: 53px;
-    gap: 8px;
+.subscription-price .old {
+  color: #aaa;
+  text-decoration: line-through;
 }
 
+/* DIVIDER LINE */
+.subscription-card-active::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #ddd;
+  margin: 0 18px;
+}
 
+/* FRAGRANCES SECTION */
+.Fragrances {
+  padding: 14px 18px 18px;
+}
 
+.Fragrances p {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* FRAGRANCE LIST */
+.fragrance-list {
+  display: flex;
+  gap: 28px;
+}
+
+/* EACH OPTION */
+.fragrance-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.fragrance-options img {
+  width: 70px;
+  height: auto;
+}
 
 /* =======================
    MOBILE
