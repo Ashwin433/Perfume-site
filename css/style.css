@@ -384,6 +384,7 @@ body {
 
 .subscription-options {
     display: flex;
+    flex-direction: column;
     width: 610px;
     height: 839.63px;
     gap: 11px;
@@ -412,7 +413,9 @@ body {
 }
 
 
-/* MOST POPULAR BAR */
+/* ===============================
+   MOST POPULAR BAR
+================================ */
 .subscription-main {
   background: linear-gradient(90deg, #19b84a, #0b5f2a);
   color: #fff;
@@ -421,23 +424,25 @@ body {
   font-weight: 600;
 }
 
-/* Left: radio + text */
+/* ===============================
+   SINGLE SUBSCRIPTION ROW
+================================ */
 .subscription-single {
   padding: 16px 18px 10px;
   font-weight: 600;
+  position: relative;
 }
 
-/* Right: price */
+/* PRICE (RIGHT SIDE) */
 .subscription-price {
   position: absolute;
   right: 18px;
-  top: 64px;
+  top: 55px;
   display: flex;
   gap: 8px;
   align-items: center;
 }
 
-/* Price styling */
 .subscription-price .current {
   font-size: 18px;
   font-weight: 700;
@@ -449,26 +454,23 @@ body {
   text-decoration: line-through;
 }
 
-/* DIVIDER LINE */
+/* DIVIDER BELOW SINGLE SUBSCRIPTION */
 .subscription-single::after {
   content: "";
   display: block;
-  width: calc(100% + 36px); /* full card width */
+  width: calc(100% + 36px);
   height: 1px;
   background: #ddd;
   margin-top: 14px;
   margin-left: -18px;
 }
 
-
-/* FRAGRANCES SECTION */
+/* ===============================
+   FRAGRANCES SECTION (FIXED)
+================================ */
 .Fragrances {
   padding: 14px 18px 18px;
-  width: 404.57px;
-  height: 20px;
-  font-size: 16.18px;
-  font-weight: 300;
-  font-style: light;
+  font-size: 16px;
 }
 
 .Fragrances p {
@@ -476,15 +478,11 @@ body {
   margin-bottom: 12px;
 }
 
-/* FRAGRANCE LIST */
 .fragrance-list {
   display: flex;
-  width: 404.57px;
-  height: 152.68px;
   gap: 28px;
 }
 
-/* EACH OPTION */
 .fragrance-options {
   display: flex;
   flex-direction: column;
@@ -498,6 +496,122 @@ body {
   height: auto;
 }
 
+/* ===============================
+   WHAT'S INCLUDED (FINAL FIX)
+================================ */
+.whats-included {
+  margin-top: 24px;
+  padding: 18px;
+}
+
+.included-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* TWO BOX LAYOUT */
+.included-boxes {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* LEFT: Every 30 Days */
+.included-card {
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SHOW ONLY ONE IMAGE */
+.included-card img {
+  width: 60px;
+  height: auto;
+  display: block;
+}
+
+.included-card img:not(:first-child) {
+  display: none;
+}
+
+/* YELLOW HIGHLIGHT */
+.included-image {
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* RIGHT: One Time (Free) */
+.included-card-wide {
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+/* HEADINGS */
+.included-head {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.included-head span {
+  color: black;
+  font-weight: 600;
+}
+
+/* THREE BOTTLES */
+.images-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.images-group img {
+  width: 48px;
+  height: auto;
+}
+
+.included-benefits{
+    margin-top: auto;
+    padding: 18px;
+    line-height: 1.5;
+    
+}
+
+.subscription-card{
+    display: flex;
+}
+
+.subscription-card-notactive{
+    display: flex;
+    width: 609.97px;
+    height: 56.64px;
+    border: 2px solid #1f8f4a;
+    background: #fff;
+    border-radius: 14px;
+}
+
+.subscription-double{
+    width: 281.84px;
+    height: 30px;
+    top: 796.2px;
+    left: 51.02px;
+    font-family: Inter;
+    font-weight: 300;
+    font-style: Light;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.9px;
+    vertical-align: middle;
+}
 
 
 /* =======================
