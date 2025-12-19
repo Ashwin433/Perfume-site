@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERFUMES</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="navbar">
+        <div class="logo">GTG</div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="menu">
+            <a href="#">Home</a>
+            <a href="#">Shop <img src="images/dropdown.png" alt="dropdown"></a>
+            <a href="#">Fragrances</a>
+            <a href="#">About Us</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <div class="search-btn">
+                <img src="images/Vector.png" alt="Search">
+            </div>
+            <button class="btn">Shop Now</button>
+        </div>
+    </div>
+</header>
+
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-title" ><img src="images/Medal.png" alt="Hero Title"> Awarded the best perfume in the world</div>
+        <h1 class="hero-subtitle">Live your best life.</h1>
+        <div class="hero-data">
+            <div class="hero-data-item">
+                <h2>10x</h2>
+                <p>power</p>
+            </div>
+            <div class="hero-data-item">
+                <h2>9</h2>
+                <p>ingredients</p>
+            </div>
+            <div class="hero-data-item">
+                <h2>20K+</h2>
+                <p>happy customers</p>
+            </div>
+    </div>
+    <button class="btn">Shop Now</button>
+</section>
+
+<!-- PRODUCT SECTION -->
+<section class="product-section">
+    <div class="product-container">
+
+        <!-- LEFT: IMAGE SLIDER -->
+        <div class="product-images">
+            <div class="product-image-slider">
+
+                <button class="slider-btn left" onclick="prevImage()">&#10094;</button>
+
+                <img id="mainProductImage" src="images/Rectangle 6723.png" alt="GTG perfume">
+
+                <button class="slider-btn right" onclick="nextImage()">&#10095;</button>
+
+                <!-- Dots -->
+                <div class="slider-dots">
+                    <span class="dot active" onclick="setImage(0)"></span>
+                    <span class="dot" onclick="setImage(1)"></span>
+                    <span class="dot" onclick="setImage(2)"></span>
+                    <span class="dot" onclick="setImage(3)"></span>
+                </div>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="image-grid">
+                <img src="images/grid image 1.png" onclick="setImage(1)">
+                <img src="images/grid image 2.png" onclick="setImage(2)">
+                <img src="images/grid image 3.png" onclick="setImage(3)">
+                <img src="images/grid image 4.png" onclick="setImage(0)">
+                <img src="images/grid image 1.png" onclick="setImage(1)">
+                <img src="images/grid image 2.png" onclick="setImage(2)">
+                <img src="images/grid image 3.png" onclick="setImage(3)">
+                <img src="images/grid image 4.png" onclick="setImage(0)">
+            </div>
+        </div>
+
+        <!-- RIGHT: INFO -->
+        <div class="product-info">
+            <h2>GTG Perfumes</h2>
+
+            <div class="ratings">
+                <img src="images/Star 6.png">
+                <img src="images/Star 7.png">
+                <img src="images/Star 8.png">
+                <img src="images/Star 9.png">
+                <img src="images/Star 10.png">
+                <span>4.7 (999+ reviews)</span>
+            </div>
+
+            <p class="description">
+                Experience the timeless allure backed by modern artistry, captured in every bottle of our fragrance.
+                Crafted for those who seek to elevate their essence with purpose and sophistication.
+            </p>
+
+            <!-- SUBSCRIPTIONS -->
+            <div class="subscription-options">
+                <label class="subscription-card-active">
+                    <input type="radio" name="subscription" checked>
+                    <div class="subscription-main"></div>
+                    <div class="subscription-head-popular">
+                        <span>Most Popular</span>
+                    </div>
+                    <div class = "subscription-main">
+                        <span>Single Subscription</span>
+                    </div>
+                    <div class="subscription-price">
+                        <span class="current">$99.99</span>
+                        <span class="old">$146</span>
+                    </div>
+                    </div>
+
+                  
+
+                <label class="subscription-card">
+                    <input type="radio" name="subscription">
+                    <div>
+                        <strong>Double Subscription</strong>
+                        <p>$169.99</p>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<script src="./script/script.js"></script>
+
+</body>
+</html>
