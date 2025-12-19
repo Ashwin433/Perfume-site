@@ -11,6 +11,10 @@
 body {
     background: #ffffff;
     color: #000000;
+    body {
+    font-family: 'Inter', sans-serif;
+}
+
 }
 
 /* =======================
@@ -419,10 +423,7 @@ body {
 
 /* Left: radio + text */
 .subscription-single {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 16px 18px;
+  padding: 16px 18px 10px;
   font-weight: 600;
 }
 
@@ -430,10 +431,10 @@ body {
 .subscription-price {
   position: absolute;
   right: 18px;
-  top: 64px; /* adjust slightly if needed */
+  top: 64px;
   display: flex;
-  align-items: center;
   gap: 8px;
+  align-items: center;
 }
 
 /* Price styling */
@@ -449,17 +450,25 @@ body {
 }
 
 /* DIVIDER LINE */
-.subscription-card-active::after {
+.subscription-single::after {
   content: "";
   display: block;
+  width: calc(100% + 36px); /* full card width */
   height: 1px;
   background: #ddd;
-  margin: 0 18px;
+  margin-top: 14px;
+  margin-left: -18px;
 }
+
 
 /* FRAGRANCES SECTION */
 .Fragrances {
   padding: 14px 18px 18px;
+  width: 404.57px;
+  height: 20px;
+  font-size: 16.18px;
+  font-weight: 300;
+  font-style: light;
 }
 
 .Fragrances p {
@@ -470,6 +479,8 @@ body {
 /* FRAGRANCE LIST */
 .fragrance-list {
   display: flex;
+  width: 404.57px;
+  height: 152.68px;
   gap: 28px;
 }
 
@@ -486,6 +497,8 @@ body {
   width: 70px;
   height: auto;
 }
+
+
 
 /* =======================
    MOBILE
