@@ -207,11 +207,12 @@ body {
 }
 
 .product-container {
-    width: 1600px;;
-    margin: auto;
-    display: flex;
-    gap: 92px;
+  width: 1600px;
+  margin: auto;
+  display: flex;
+  gap: 92px;
 }
+
 
 .product-images {
     flex: 1;
@@ -722,9 +723,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1320px;           
+  max-width: 1600px;           
   margin: auto;
   gap: 64px;
+  display: flex;
 }
 
 
@@ -754,18 +756,56 @@ body {
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .collection-container {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  #our-collection-image {
-    max-width: 100%;
-  }
+.Collection-accordion {
+  display: flex;
+  flex-direction: column;
+  width: 626px;
+  gap: 14px;
 }
 
+/* Accordion card */
+.accordion-item {
+  border: 1px solid #cdcdcd;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: border 0.2s ease;
+}
 
+/* Header */
+.accordion-header {
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Icon */
+.accordion-icon {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Content (hidden by default) */
+.accordion-content {
+  display: none;
+  padding: 0 24px 20px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Open state */
+.accordion-item.open {
+  border-color: #1f8f4a;
+}
+
+.accordion-item.open .accordion-content {
+  display: block;
+}
 
 
 /* ===============================
