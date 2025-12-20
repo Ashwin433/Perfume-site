@@ -808,6 +808,7 @@ body {
 }
 
 .base{
+  display: flex;
   width: 1458.27734375;
   padding: 80px;
   background: linear-gradient(180deg, #032E15 0%, #016630 100%);
@@ -818,31 +819,30 @@ body {
   display: flex;
   justify-content: center;
   width: 1119.9827880859375px;
-  height: 86.2144775390625px;
-  top: 3047.63px;
-  left: 164.15px;
+  height: autos;
   gap: 200px;
 
   }
 
 .base-details{
   display: flex;
+  justify-content: center;
   flex-direction: row;
   width: 215.49569702148438px;
-  height: 86.2144775390625px;
-  gap: 0px;
+  height: auto;
+  gap: 150px;
 }
 
 .base-info{
   width: 215.49569702148438px;
-  height: 86.2144775390625px;
+  height: auto;
   gap: 19.21px;
   flex-shrink: 0
 }
 
 .base-info h3{
   width: 215.49569702148438px;
-  height: 29px;
+  height: auto;
   font-family: Inter;
   font-weight: 700;
   font-style: Bold;
@@ -857,6 +857,7 @@ body {
 .base-info span{
   width: 215.49569702148438px;
   height: 38px;
+  padding: 20px ;
   font-family: Inter;
   font-weight: 300;
   font-style: Light;

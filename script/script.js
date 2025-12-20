@@ -89,3 +89,39 @@ sliderBtnRight.addEventListener('click', () => {
 });
 
 
+const counters = document.querySelectorAll(".base-info h3");
+
+  const animateCounter = (counter) => {
+    const target = parseInt(counter.dataset.target, 10);
+    let current = 0;
+
+    const speed = 100; // smaller = faster
+
+    const update = () => {
+      const increment = Math.ceil(target / speed);
+      current += increment;
+
+      if (current >= target) {
+        counter.textContent = target + "%";
+      } else {
+        counter.textContent = current + "%";
+        requestAnimationFrame(update);
+      }
+    };
+
+    update();
+  };
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          obs.unobserve(entry.target); // run only once
+        }
+      });
+    },
+    { threshold: 0.5 } // 50% visible
+  );
+
+  counters.forEach(counter => observer.observe(counter));
