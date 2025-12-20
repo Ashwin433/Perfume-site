@@ -220,19 +220,18 @@ body {
 /* Card container */
 .product-image-slider {
     position: relative;
-    background: #f4f4f4;      
-    object-fit: cover;       
-    width: 100%; 
-    height: 520px;              /* FIXED HEIGHT */
+    background: #f4f4f4;
+    width: 100%;
+    height: 520px;
     display: flex;
     align-items: center;
-    justify-content: center;     
+    justify-content: center;
 }
+
 
 /* Main image */
 .product-image-slider img {
-    width: 100%;
-    max-width: 420px;           /* bottle width consistency */
+    width: 100%;           
     height: 100%;
     object-fit: contain;        /* prevents cropping */
     border-radius: 12px;
@@ -398,7 +397,7 @@ body {
   padding: 0;
   overflow: hidden;
   background: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   display: block;
 }
 
@@ -584,19 +583,7 @@ body {
     
 }
 
-.subscription-double{
-    width: 281.84px;
-    height: 30px;
-    top: 796.2px;
-    left: 51.02px;
-    font-family: Inter;
-    font-weight: 300;
-    font-style: Light;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0.9px;
-    vertical-align: middle;
-}
+
 
 /* ===============================
    DOUBLE SUBSCRIPTION
@@ -608,7 +595,8 @@ body {
   margin-top: 24px;
   position: relative;
   padding: 0;
-  margin-top: 24px;
+  margin-top: 15px;
+  margin-bottom: 8px;
   border: 1.5px solid #1f8f4a;
   border-radius: 16px;
   background: #fff;
@@ -707,6 +695,74 @@ body {
   width: 70px;
   height: auto;
   margin-top: 6px;
+}
+
+.add-to-cart{
+  padding: 12.14px 24.27px;
+  width: 610px;
+  height: 52.27px;
+  border-radius: 505.64px;
+  background: linear-gradient(180deg, #032E15 0%, #016630 100%);
+  font-size: 18.2px;
+  font-weight: 500;
+  font-style: medium;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: white;
+  margin-top: 20px;
+}
+
+/* COLLECTION PART */
+
+.Collection {
+  padding: 80px 60px;         
+}
+
+.Collection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1320px;           
+  margin: auto;
+  gap: 64px;
+}
+
+
+.our-collection{
+  max-width: 650px;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.our-collection-head{
+  flex-direction: column;
+  width: auto;
+  max-height: 50px;
+  font-weight: 700;
+  font-style:medium;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+#our-collection-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .collection-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  #our-collection-image {
+    max-width: 100%;
+  }
 }
 
 
