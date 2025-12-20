@@ -1,6 +1,4 @@
-/* =======================
-   GLOBAL
-======================= */
+/*GLOBAL*/
 * {
     margin: 0;
     padding: 0;
@@ -17,9 +15,7 @@ body {
 
 }
 
-/* =======================
-   NAVBAR
-======================= */
+/*NAVBAR*/
 .header {
     padding: 20px 60px;
     position: absolute;
@@ -107,7 +103,7 @@ body {
     height: 344px;
     top: 175.5px;
     left: 74px;
-    gap : 40px;
+    gap : 50px;
 }
 .hero-title {
     display: flex;                 
@@ -150,9 +146,8 @@ body {
 .hero-data {
     display: flex;
     align-items: center;
-    width: 545px;
-    height: 86px;
-    gap: 24px;
+    gap: 12px;
+    margin-bottom: 100px;
 }
 
 .hero-data-item {
@@ -161,15 +156,10 @@ body {
     flex-direction: column;            
     width: 183.5px;
     height: 86px;
-    gap: 18px;
+    gap: 8px;
 }
 
 .hero-data-item h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 127px;
-    height: 52px;
     font-size: 72px;
     font-weight: 700;
     font-style: bold;
@@ -180,28 +170,19 @@ body {
 }
 
 .hero-data-item p {
-    display: flex;
-    width: 64px;
-    height: 16px;
-    align-items: center;
-    justify-content: center;
     background: rgba(13, 84, 43, 1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero-section.btn {
-    margin-top: 40px;
-    width: 185px;
-    height: 48px;
+    margin-top: 10px;
     border-radius: 1000px;
     padding: 12px 16px;
-    gap: 100px;
+    gap: 70px;
 
 }
-/* =======================
-   PRODUCT SECTION
-======================= */
+/* PRODUCT SECTION*/
 .product-section {
     padding: 100px 60px;
 }
@@ -234,7 +215,7 @@ body {
 .product-image-slider img {
     width: 100%;           
     height: 100%;
-    object-fit: contain;        /* prevents cropping */
+    object-fit: contain;       
     border-radius: 12px;
     display: block;
 }
@@ -242,7 +223,7 @@ body {
 /* Arrows */
 .slider-btn {
     position: absolute;
-    bottom: 24px;                     /* INSIDE container */
+    bottom: 24px;                     
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -258,11 +239,11 @@ body {
 }
 
 .slider-btn.left {
-    left: 24px;                       /* bottom-left */
+    left: 24px;                       
 }
 
 .slider-btn.right {
-    right: 24px;                      /* bottom-right */
+    right: 24px;                     
 }
 
 .slider-btn:hover {
@@ -292,10 +273,6 @@ body {
     background: #0c4f2e;
 }
 
-
-/* =======================
-   THUMBNAILS
-======================= */
 .image-grid {
     margin-top: 20px;
     display: grid;
@@ -315,11 +292,6 @@ body {
 .image-grid img:hover {
     transform: scale(1.05);
 }
-
-/* =======================
-   PRODUCT INFO
-======================= */
-
 
 .product-info{
     width: 610px;
@@ -410,10 +382,6 @@ body {
   padding: 16px 18px;
 }
 
-
-/* ===============================
-   MOST POPULAR BAR
-================================ */
 .subscription-main {
   background: linear-gradient(90deg, #19b84a, #0b5f2a);
   color: #fff;
@@ -422,9 +390,7 @@ body {
   font-weight: 600;
 }
 
-/* ===============================
-   SINGLE SUBSCRIPTION ROW
-================================ */
+/*SINGLE SUBSCRIPTION ROW */
 .subscription-single {
   padding: 16px 18px 10px;
   font-weight: 600;
@@ -462,10 +428,7 @@ body {
   margin-top: 14px;
   margin-left: -18px;
 }
-
-/* ===============================
-   FRAGRANCES SECTION (FIXED)
-================================ */
+ */
 .Fragrances {
   padding: 14px 18px 18px;
   font-size: 16px;
@@ -494,9 +457,7 @@ body {
   height: auto;
 }
 
-/* ===============================
-   WHAT'S INCLUDED (FINAL FIX)
-================================ */
+
 .whats-included {
   margin-top: 24px;
   padding: 18px;
@@ -586,28 +547,23 @@ body {
 
 
 
-/* ===============================
-   DOUBLE SUBSCRIPTION
-================================ */
+/* double subscription */
 
 .subscription-card-double {
   display: flex;
   flex-direction: column;
-  margin-top: 24px;
   position: relative;
-  padding: 0;
-  margin-top: 15px;
-  margin-bottom: 8px;
+  margin: 15px 0 8px;
   border: 1.5px solid #1f8f4a;
   border-radius: 16px;
   background: #fff;
   overflow: hidden;
-
 }
 
-/* Header row (same as .subscription-single) */
+/*HEADER*/
+
 .double-header {
-  padding: 16px 18px 10px;
+  padding: 16px 18px 14px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -617,16 +573,20 @@ body {
   color: #000;
 }
 
-/* Title */
+.double-header input[type="radio"] {
+  accent-color: #1f8f4a;
+}
+
 .double-title {
   font-weight: 600;
 }
 
-/* Price aligned EXACTLY like single */
+/*PRICE*/
+
 .double-price {
   position: absolute;
   right: 18px;
-  top: 55px;   /* matches single subscription */
+  top: 18px;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -644,31 +604,26 @@ body {
   text-decoration: line-through;
 }
 
-/* Divider (same visual as single) */
+/*DIVIDER*/
+
 .double-divider {
   width: calc(100% - 36px);
   height: 1px;
   background: #ddd;
-  margin: 14px auto 0;
+  margin: 8px auto 0;
 }
 
-/* FRAGRANCES */
+/*FRAGRANCES*/
 
-.double-header input[type="radio"] {
-  accent-color: #1f8f4a;
-}
 .double-fragrances {
   padding: 14px 18px 18px;
-  border-radius: 10px;
-  margin-bottom: 16px;
 }
 
 .double-fragrances p {
   font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color: #000;
-  margin-bottom: 12px
+  margin-bottom: 12px;
 }
 
 .double-fragrance-list {
@@ -680,37 +635,97 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
   width: 110px;
+  gap: 6px;
 }
 
 .double-fragrance-options span {
   font-size: 14px;
-  display: block;
   font-weight: 500;
-  color: #000;
-  margin-top: 4px;
 }
 
 .double-fragrance-options img {
   width: 70px;
   height: auto;
-  margin-top: 6px;
 }
 
-.add-to-cart{
-  padding: 12.14px 24.27px;
+/*WHAT'S INCLUDED*/
+
+.double-whats-included {
+  padding: 0 18px 18px;
+}
+
+.included-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.included-boxes {
+  display: flex;
+  gap: 14px;
+}
+
+/* Left Card */
+
+.included-card {
+  flex: 1;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.included-head {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.included-image img {
+  width: 48px;
+  height: auto;
+}
+
+/* Right Card */
+
+.included-card-wide {
+  flex: 2;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.included-card-wide .included-head span {
+  color: #1f8f4a;
+  font-weight: 600;
+}
+
+.images-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.images-group img {
+  width: 42px;
+  height: auto;
+}
+
+/*ADD TO CART BUTTON*/
+
+.add-to-cart {
   width: 610px;
-  height: 52.27px;
-  border-radius: 505.64px;
+  height: 52px;
+  margin: 20px auto 0;
+  display: block;
+  border-radius: 999px;
   background: linear-gradient(180deg, #032E15 0%, #016630 100%);
-  font-size: 18.2px;
+  font-size: 18px;
   font-weight: 500;
-  font-style: medium;
-  line-height: 28px;
-  letter-spacing: 0%;
-  color: white;
-  margin-top: 20px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 /* COLLECTION PART */
@@ -789,7 +804,6 @@ body {
   font-weight: 400;
 }
 
-/* Content (hidden by default) */
 .accordion-content {
   display: none;
   padding: 0 24px 20px;
@@ -798,7 +812,6 @@ body {
   line-height: 1.6;
 }
 
-/* Open state */
 .accordion-item.open {
   border-color: #1f8f4a;
 }
@@ -868,12 +881,266 @@ body {
   background: rgba(255, 255, 255, 1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.why-ctg{
+  width: 950.13px;
+  padding: 100px 5px;
+  margin: 0 auto;              
 
 
 }
-/* ===============================
-   COLLAPSE SINGLE SUBSCRIPTION
-================================ */
+
+.why-ctg-main{
+  width: 950.13px;
+  gap: 57px;
+  align-items: center;
+}
+
+.why-ctg-header{
+  display: flex;
+  flex-flow: column;
+  padding-left: 300px;
+  gap: 39px;
+  align-items: center;   
+  text-align: center;
+}
+
+.why-ctg-header-top{
+  font-family: Oxanium;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.why-ctg-header-content{
+  font-family: Inter;
+  font-weight: 600;
+  font-style: medium;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  align-items: center;
+}
+
+.comparison-section{
+ padding-top: 70px;
+  width: 951px;
+  height: auto;
+  margin-bottom: 120px;
+}
+
+.highlight{
+  width: 108px;
+  height: 143px;
+  top: 228px;
+  left: 342.57px;
+}
+
+.feature-col {
+  text-align: left !important;
+  width: 260px;
+  font-weight: 500;
+  text-align: left;
+}
+
+
+.comparison-table {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: Inter, sans-serif;
+}
+
+
+.comparison-table thead th {
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: none;
+  padding-bottom: 28px
+}
+
+.comparison-table thead th img {
+  display: block;        
+  margin: 0 auto 8px;
+  width: 88px;
+  height: 88px;
+  border-radius: 16px;
+  object-fit: cover;    
+}
+
+.comparison-table thead th span {
+  display: block;        
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 18px 60px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #d9d9d9; 
+  width: 140px;
+}
+
+
+.highlight {
+  background: #f1fff6;
+}
+
+.comparison-table th.highlight,
+.comparison-table td.highlight {
+  background: #f1fff6;
+}
+
+/* CHECK / CROSS */
+.check {
+  color: #1f8f4a;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.cross {
+  color: #777;
+  font-size: 18px;
+}
+
+.comparison-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px; 
+}
+
+.cta-btn {
+  width: 194.5418243408203px;
+  height: 56.270912170410156px;
+  opacity: 1;
+  border-radius: 505.64px;
+  border-bottom-width: 1.01px;
+  padding-top: 12.14px;
+  padding-right: 24.27px;
+  padding-bottom: 12.14px;
+  padding-left: 24.27px;
+  background: linear-gradient(180deg, #032E15 0%, #016630 100%);
+  color: white;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0px;
+}
+
+.cta-btn:hover {
+  background:#555
+}
+
+.footer {
+  background: #032E15;
+  color: #fff;
+  padding: 60px 120px;
+  position: static;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT */
+.footer-logo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer a {
+  color: #cfd8d3;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+/* SOCIAL */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+}
+
+/* NEWSLETTER */
+.footer-newsletter {
+  max-width: 360px;
+}
+
+.newsletter-title {
+  font-size: 14px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.newsletter-form button {
+  background: #0b5a2a;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background: #08451f;
+}
+
+.newsletter-note {
+  font-size: 11px;
+  color: #a9b6b0;
+}
+
+.newsletter-note a {
+  color: #a9b6b0;
+  text-decoration: underline;
+}
+
+
+
+/*COLLAPSE SINGLE SUBSCRIPTION */
 
 .subscription-card-active.collapsed .Fragrances,
 .subscription-card-active.collapsed .whats-included,
@@ -894,9 +1161,7 @@ body {
 }
 
 
-/* =======================
-   MOBILE
-======================= */
+/* MOBILE */
 @media (max-width: 768px) {
 
     .header {

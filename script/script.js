@@ -1,3 +1,4 @@
+// subscription card collapse
 document.addEventListener("DOMContentLoaded", () => {
 
   const singleCard = document.querySelector(".subscription-card-active");
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
+// image slider
 const sliderBtnLeft = document.querySelector('.slider-btn.left');
 const sliderBtnRight = document.querySelector('.slider-btn.right');
 const dots = document.querySelector('.sliderDts.dot')
@@ -89,6 +90,34 @@ sliderBtnRight.addEventListener('click', () => {
 });
 
 
+// Accordion
+
+document.addEventListener("DOMContentLoaded", () => {
+  const accordionItems = document.querySelectorAll(".accordion-item");
+
+  accordionItems.forEach(item => {
+    const header = item.querySelector(".accordion-header");
+    const icon = item.querySelector(".accordion-icon");
+
+    header.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+
+      // Close all accordions
+      accordionItems.forEach(other => {
+        other.classList.remove("open");
+        other.querySelector(".accordion-icon").textContent = "+";
+      });
+
+      // Open clicked accordion if it was closed
+      if (!isOpen) {
+        item.classList.add("open");
+        icon.textContent = "−";
+      }
+    });
+  });
+});
+
+// numbers from 0 to 84,90 etc..
 const counters = document.querySelectorAll(".base-info h3");
 
   const animateCounter = (counter) => {
