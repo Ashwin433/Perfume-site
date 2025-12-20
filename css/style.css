@@ -807,7 +807,69 @@ body {
   display: block;
 }
 
+.base{
+  width: 1458.27734375;
+  padding: 80px;
+  background: linear-gradient(180deg, #032E15 0%, #016630 100%);
+  justify-content: center;
+  }
 
+.base-data{
+  display: flex;
+  justify-content: center;
+  width: 1119.9827880859375px;
+  height: 86.2144775390625px;
+  top: 3047.63px;
+  left: 164.15px;
+  gap: 200px;
+
+  }
+
+.base-details{
+  display: flex;
+  flex-direction: row;
+  width: 215.49569702148438px;
+  height: 86.2144775390625px;
+  gap: 0px;
+}
+
+.base-info{
+  width: 215.49569702148438px;
+  height: 86.2144775390625px;
+  gap: 19.21px;
+  flex-shrink: 0
+}
+
+.base-info h3{
+  width: 215.49569702148438px;
+  height: 29px;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+.base-info span{
+  width: 215.49569702148438px;
+  height: 38px;
+  font-family: Inter;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+}
 /* ===============================
    COLLAPSE SINGLE SUBSCRIPTION
 ================================ */
