@@ -49,10 +49,10 @@ const mainImage = document.querySelector('#mainProductImage');
 const imagegrid = document.querySelector('#imageGrid')
 
 const images = [
-  "images/grid image 1.png",
-  "images/grid image 2.png",
-  "images/grid image 3.png",
-  "images/grid image 4.png"
+  "assets/images/grid image 1.png",
+  "assets/images/grid image 2.png",
+  "assets/images/grid image 3.png",
+  "assets/images/grid image 4.png"
 ]
 
 let currentIndex = 0;

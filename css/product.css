@@ -1,0 +1,565 @@
+/* PRODUCT SECTION*/
+.product-section {
+    padding: 100px 60px;
+}
+
+.product-container {
+  width: 1600px;
+  margin: auto;
+  display: flex;
+  gap: 92px;
+}
+
+
+.product-images {
+    flex: 1;
+}
+
+/* Card container */
+.product-image-slider {
+    position: relative;
+    background: #f4f4f4;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Main image */
+.product-image-slider img {
+    width: 100%;           
+    height: 100%;
+    object-fit: contain;       
+    border-radius: 12px;
+    display: block;
+}
+
+/* Arrows */
+.slider-btn {
+    position: absolute;
+    bottom: 24px;                     
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #cfcfcf;
+    background: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    color: #0c4f2e;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-btn.left {
+    left: 24px;                       
+}
+
+.slider-btn.right {
+    right: 24px;                     
+}
+
+.slider-btn:hover {
+    background: #0c4f2e;
+    color: #ffffff;
+}
+
+/* Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;                     /* slightly above arrows */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #cfd8d3;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #0c4f2e;
+}
+
+.image-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.image-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+}
+
+.product-info{
+    width: 610px;
+    gap: 31px;
+    flex-flow: vertical;
+}
+
+.product-info h2{
+    width: 254px;
+    height: 44px;
+    font-weight: 400;
+    font-style: semi-bold;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #032E15;
+}
+
+.product-info-details {
+    display: flex;
+    width: 610px;
+    height: 148px;
+    gap: 20px;
+}
+
+.ratings{
+    display: flex;
+}
+
+.ratings img{
+    display: flex;
+    width: 13.11px;
+    height: 13.11px;
+    top: 1.45px;
+    left: 52.43px;
+}
+
+.ratings span{
+    display: flex;
+    width: 114px;
+    height: 16px;
+    font-size: 13px;
+    font-style: light;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #0D542B;
+}
+
+.description {
+    display: flex;
+    width: 610px;
+    height: 60px;
+    font-size: 16.18px;
+    font-weight: 300;
+    line-height: 160%;
+    line-height: 100%;
+    letter-spacing: 0%;
+    justify-content: left;
+    color: #555555;
+}
+
+.subscription-options {
+    display: flex;
+    flex-direction: column;
+    width: 610px;
+    gap: 11px;
+}
+
+
+.subscription-card-active {
+  position: relative;
+  width: 610px;
+  border: 2px solid #1f8f4a;
+  border-radius: 14px;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 8px;
+  display: block;
+}
+
+
+.subscription-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+}
+
+.subscription-main {
+  background: linear-gradient(90deg, #19b84a, #0b5f2a);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+}
+
+/*SINGLE SUBSCRIPTION ROW */
+.subscription-single {
+  padding: 16px 18px 10px;
+  font-weight: 600;
+  position: relative;
+}
+
+/* PRICE (RIGHT SIDE) */
+.subscription-price {
+  position: absolute;
+  right: 18px;
+  top: 55px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.subscription-price .current {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f8f4a;
+}
+
+.subscription-price .old {
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+/* DIVIDER BELOW SINGLE SUBSCRIPTION */
+.subscription-single::after {
+  content: "";
+  display: block;
+  width: calc(100% + 36px);
+  height: 1px;
+  background: #ddd;
+  margin-top: 14px;
+  margin-left: -18px;
+}
+
+.Fragrances {
+  padding: 14px 18px 18px;
+  font-size: 16px;
+}
+
+.Fragrances p {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.fragrance-list {
+  display: flex;
+  gap: 28px;
+}
+
+.fragrance-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.fragrance-options img {
+  width: 70px;
+  height: auto;
+}
+
+
+.whats-included {
+  margin-top: 24px;
+  padding: 18px;
+}
+
+.included-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* TWO BOX LAYOUT */
+.included-boxes {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* LEFT: Every 30 Days */
+.included-card {
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SHOW ONLY ONE IMAGE */
+.included-card img {
+  width: 60px;
+  height: auto;
+  display: block;
+}
+
+.included-card img:not(:first-child) {
+  display: none;
+}
+
+/* YELLOW HIGHLIGHT */
+.included-image {
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* RIGHT: One Time (Free) */
+.included-card-wide {
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+/* HEADINGS */
+.included-head {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.included-head span {
+  color: black;
+  font-weight: 600;
+}
+
+/* THREE BOTTLES */
+.images-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.images-group img {
+  width: 48px;
+  height: auto;
+}
+
+.included-benefits{
+    margin-top: auto;
+    padding: 18px;
+    line-height: 1.5;
+    
+}
+
+
+
+/* double subscription */
+
+.subscription-card-double {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 15px 0 8px;
+  border: 1.5px solid #1f8f4a;
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+}
+
+/*HEADER*/
+
+.double-header {
+  padding: 16px 18px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.double-header input[type="radio"] {
+  accent-color: #1f8f4a;
+}
+
+.double-title {
+  font-weight: 600;
+}
+
+/*PRICE*/
+
+.double-price {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.double-price .current {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f8f4a;
+}
+
+.double-price .old {
+  font-size: 14px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+/*DIVIDER*/
+
+.double-divider {
+  width: calc(100% - 36px);
+  height: 1px;
+  background: #ddd;
+  margin: 8px auto 0;
+}
+
+/*FRAGRANCES*/
+
+.double-fragrances {
+  padding: 14px 18px 18px;
+}
+
+.double-fragrances p {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.double-fragrance-list {
+  display: flex;
+  gap: 28px;
+}
+
+.double-fragrance-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110px;
+  gap: 6px;
+}
+
+.double-fragrance-options span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.double-fragrance-options img {
+  width: 70px;
+  height: auto;
+}
+
+/*WHAT'S INCLUDED*/
+
+.double-whats-included {
+  padding: 0 18px 18px;
+}
+
+.included-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.included-boxes {
+  display: flex;
+  gap: 14px;
+}
+
+/* Left Card */
+
+.included-card {
+  flex: 1;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.included-head {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.included-image img {
+  width: 48px;
+  height: auto;
+}
+
+/* Right Card */
+
+.included-card-wide {
+  flex: 2;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.included-card-wide .included-head span {
+  color: #1f8f4a;
+  font-weight: 600;
+}
+
+.images-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.images-group img {
+  width: 42px;
+  height: auto;
+}
+
+/*ADD TO CART BUTTON*/
+
+.add-to-cart {
+  width: 610px;
+  height: 52px;
+  margin: 20px auto 0;
+  display: block;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #032E15 0%, #016630 100%);
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/*COLLAPSE SINGLE SUBSCRIPTION */
+
+.subscription-card-active.collapsed .Fragrances,
+.subscription-card-active.collapsed .whats-included,
+.subscription-card-active.collapsed .included-benefits {
+  display: none;
+}
+
+/* COLLAPSE DOUBLE SUBSCRIPTION */
+.subscription-card-double.collapsed .double-fragrances,
+.subscription-card-double.collapsed .double-whats-included {
+  display: none;
+}
+
+
+/* Smooth transition */
+.subscription-card-active {
+  transition: all 0.3s ease;
+}
