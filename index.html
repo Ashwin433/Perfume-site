@@ -128,7 +128,7 @@
     </div>
 
     <div class="subscription-single">
-      <input type="radio" name="subscription" checked>
+      <input type="radio" name="subscription" value="single" checked>
       <span>Single Subscription</span>
     </div>
 
@@ -144,19 +144,19 @@
 
       <div class="fragrance-list">
         <div class="fragrance-options">
-          <input type="radio" name="fragrance" checked>
+          <input type="radio" name="fragrance" value="original" checked>
           <span>Original</span><br>
           <img src="assets/images/single sub 1.png">
         </div>
 
         <div class="fragrance-options">
-          <input type="radio" name="fragrance">
+          <input type="radio" name="fragrance" value="lilly">
           <span>Lilly</span><br>
           <img src="assets/images/single sub 2.png">
         </div>
 
         <div class="fragrance-options">
-          <input type="radio" name="fragrance">
+          <input type="radio" name="fragrance" value="rose">
           <span>Rose</span><br>
           <img src="assets/images/single sub 3.png">
         </div>
@@ -200,7 +200,7 @@
 
   <!-- HEADER (same role as subscription-single + price) -->
   <div class="double-header">
-    <input type="radio" name="subscription">
+    <input type="radio" name="subscription" value="double">
 
     <span class="double-title">Double Subscription</span>
 
@@ -295,7 +295,7 @@
 
 </label>
 </div>
-<button class="add-to-cart">Add to Cart</button>
+<a href="#" class="add-to-cart" id="addToCartBtn">Add to Cart</a>
 </div>
 </section>
 

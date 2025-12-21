@@ -160,3 +160,47 @@ const counters = document.querySelectorAll(".base-info h3");
   );
 
   counters.forEach(counter => observer.observe(counter));
+
+
+  const addToCartBtn = document.getElementById("addToCartBtn");
+
+function updateAddToCartLink() {
+  const subscription =
+    document.querySelector('input[name="subscription"]:checked')?.value;
+
+  const fragrance =
+    document.querySelector('input[name="fragrance"]:checked')?.value;
+
+  if (!subscription || !fragrance) return;
+
+  // Dummy links for 9 combinations
+  const linkMap = {
+    single: {
+      original: "https://example.com/cart?plan=single&frag=original",
+      lilly: "https://example.com/cart?plan=single&frag=lilly",
+      rose: "https://example.com/cart?plan=single&frag=rose"
+    },
+    double: {
+      original: "https://example.com/cart?plan=double&frag=original",
+      lilly: "https://example.com/cart?plan=double&frag=lilly",
+      rose: "https://example.com/cart?plan=double&frag=rose"
+    }
+  };
+
+  addToCartBtn.href = linkMap[subscription][fragrance];
+}
+
+// Listen to ALL relevant radio changes
+document.querySelectorAll(
+  'input[name="subscription"], input[name="fragrance"]'
+).forEach(radio => {
+  radio.addEventListener("change", updateAddToCartLink);
+});
+
+
+
+
+
+
+
+
