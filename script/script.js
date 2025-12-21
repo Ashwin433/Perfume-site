@@ -41,6 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+function toggleMenu() {
+  const menu = document.querySelector(".menu");
+  if (!menu) return;
+  menu.classList.toggle("active");
+}
+
 // image slider
 const sliderBtnLeft = document.querySelector('.slider-btn.left');
 const sliderBtnRight = document.querySelector('.slider-btn.right');
